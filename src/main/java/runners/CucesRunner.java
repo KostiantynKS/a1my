@@ -2,9 +2,12 @@ package runners;
 
 import org.junit.runner.RunWith;
 
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
 
 	
-	@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)
 	@CucumberOptions(
 			plugin = {
 			"pretty",
@@ -12,9 +15,9 @@ import org.junit.runner.RunWith;
 			"json:target/cucumber.json"
 			},
 			tags = "@temp",
-			features = {"a1my/src/test/resources/basic_scenarious.feature"},
-			glue={"a1my/src/main/java/runners/CucesRunner.java"},
-			dryRun=true	
+			features = {"src/test/resources/basic_scenarious.feature"},
+			glue={"src/main/java/runners/CucesRunner.java"},
+			dryRun=false	
 			)
 	
 public class CucesRunner {
