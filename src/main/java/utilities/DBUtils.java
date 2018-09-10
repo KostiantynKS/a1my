@@ -1,41 +1,48 @@
 package utilities;
 
-import java.beans.Statement;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class DBUtils {
+
 	public static void main(String[] args) {
 		createConnection();
-		String query = "select * from users where team_id=38;";
-		System.out.println(getColumnData(query, "firstname"));
+		
+		List<Map<String, Object>> queryResult = getQueryResultMap("select name, capacity from room where withtv = true and withwhiteboard = true;");
+	//	String query = "select * from users where team_id=38;";
+	//	System.out.println(getColumnData(query, "firstname"));
+		System.out.println(queryResult);
 
 		destroy();
 	}
+
 	private static Connection connection;
 	private static Statement statement;
 	private static ResultSet resultSet;
 
 	public static void createConnection() {
-//		String url = Environment.DB_HOST;
-//		String user = Environment.DB_USERNAME;
-//		String password = Environment.DB_PASSWORD;
+		String url = Environment.DB_HOST;
+		String user = Environment.DB_USERNAME;
+		String password = Environment.DB_PASSWORD;
 
 
-//		try {
-//			connection = DriverManager.getConnection(url, user, password);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			connection = DriverManager.getConnection(url, user, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
+
 	public static void destroy() {
 		try {
 			if (resultSet != null) {
@@ -53,6 +60,7 @@ public class DBUtils {
 		}
 
 	}
+
 	/**
 	 * 
 	 * @param query
@@ -74,6 +82,7 @@ public class DBUtils {
 	public static List<Object> getRowList(String query) {
 		return getQueryResultList(query).get(0);
 	}
+
 	/**
 	 * 
 	 * @param query
@@ -227,6 +236,5 @@ public class DBUtils {
 		return rowCount;
 
 	}
-
 
 }

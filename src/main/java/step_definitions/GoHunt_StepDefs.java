@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.HomePage;
 import utilities.Driver;
 
 public class GoHunt_StepDefs {
@@ -20,17 +21,19 @@ public class GoHunt_StepDefs {
 	   
 	}
 
-//	@When("User click on the hunt button")
-//	public void user_click_on_the_hunt_button() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    
-//	}
-//
-//	@Then("User should be on the on the hunting page")
-//	public void user_should_be_on_the_on_the_hunting_page() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    
-//	}
+	@When("User click on the hunt button")
+	public void user_click_on_the_hunt_button() {
+	   HomePage mp = new HomePage();
+	   mp.huntButton.click();
+	    
+	}
+
+	@Then("User should be on the on the hunting page")
+	public void user_should_be_on_the_on_the_hunting_page() {
+		actual = Driver.getDriver().getTitle();
+	    expected = "hunt for spot";
+	    assertEquals(expected, actual);
+	}
 
 
 

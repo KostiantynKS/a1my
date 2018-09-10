@@ -1,6 +1,6 @@
 Feature: Basic test scenarios
 
-@temp
+@smoke
 Scenario: User already logged and on the HomePage
 Given User already logged and on the HomePage
 When User click on the hunt button

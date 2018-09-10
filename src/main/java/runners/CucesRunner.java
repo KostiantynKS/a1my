@@ -12,12 +12,13 @@ import cucumber.api.junit.Cucumber;
 			plugin = {
 			"pretty",
 			"html:target/default-cucumber-reports", //generates every time we run the cukes runner
-			"json:target/cucumber.json"
+			"json:target/cucumber.json",
+			"json:target/cucumber.xml"
 			},
-			tags = "@temp",
-			features = {"src/test/resources/basic_scenarious.feature"},
+			tags = "@smoke",
+			features = {"src/test/resources"},
 			glue={"src/main/java/runners/CucesRunner.java"},
-			dryRun=false	
+			dryRun=false
 			)
 	
 public class CucesRunner {
