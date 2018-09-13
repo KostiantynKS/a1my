@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 			"pretty",
 			"html:target/default-cucumber-reports", //generates every time we run the cukes runner
 			"json:target/cucumber.json",
-			"json:target/cucumber.xml",
+			"junit:target/cucumber.xml",
 			"rerun:target/rerun.txt"
 			},
 			tags = "@smoke",
