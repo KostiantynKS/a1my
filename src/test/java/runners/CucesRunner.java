@@ -19,7 +19,7 @@ import cucumber.api.junit.Cucumber;
 			tags = "@smoke",
 			features = {"src/test/resources"},
 			glue={"step_definitions"},
-			dryRun=true
+			dryRun=false
 			)
 	
 public class CucesRunner {
