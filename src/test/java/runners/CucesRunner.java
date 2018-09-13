@@ -13,12 +13,13 @@ import cucumber.api.junit.Cucumber;
 			"pretty",
 			"html:target/default-cucumber-reports", //generates every time we run the cukes runner
 			"json:target/cucumber.json",
-			"json:target/cucumber.xml"
+			"json:target/cucumber.xml",
+			"rerun:target/rerun.txt"
 			},
 			tags = "@smoke",
 			features = {"src/test/resources"},
-			glue={"src/main/java/runners/CucesRunner.java"},
-			dryRun=false
+			glue={"step_definitions"},
+			dryRun=true
 			)
 	
 public class CucesRunner {

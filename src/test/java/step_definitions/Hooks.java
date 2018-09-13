@@ -19,10 +19,10 @@ public class Hooks {
 	Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		 Driver.getDriver().manage().window().fullscreen();
 		 Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-		 StartingPage sp = new StartingPage();
-		 sp.emailField.sendKeys("email");
-		 sp.passwordField.sendKeys("password");
-		 sp.signInButton.click();
+//		 StartingPage sp = new StartingPage();
+//		 sp.emailField.sendKeys("email");
+//		 sp.passwordField.sendKeys("password");
+//		 sp.signInButton.click();
 	}
 
 	// @Before("@amazon_check")

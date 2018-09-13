@@ -18,13 +18,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * This is a utility for reading from writing to excel files.
  * it ONLY works with xlsx files.
  */
-public class ExelUtil {
+public class ExcelUtil {
 
 	private XSSFSheet workSheet;
 	private XSSFWorkbook workBook;
 	private String path;
 
-	public ExelUtil(String path, String sheetName) {
+	public ExcelUtil(String path, String sheetName) {
 		this.path = path;
 		try {
 			// Open the Excel file
