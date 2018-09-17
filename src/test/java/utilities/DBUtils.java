@@ -16,10 +16,10 @@ public class DBUtils {
 	public static void main(String[] args) {
 		createConnection();
 		
-		List<Map<String, Object>> queryResult = getQueryResultMap("select name, capacity from room where withtv = true and withwhiteboard = true;");
+		//List<Map<String, Object>> queryResult = getQueryResultMap("select name, capacity from room where withtv = true and withwhiteboard = true;");
 	//	String query = "select * from users where team_id=38;";
 	//	System.out.println(getColumnData(query, "firstname"));
-		System.out.println(queryResult);
+	//	System.out.println(queryResult);
 
 		destroy();
 	}

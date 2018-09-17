@@ -12,13 +12,13 @@ public class StartingPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
-	@FindBy(xpath = "/html/body/app-root/div/app-sign-in-page/div/div/div/div/form/div[1]/div[2]/div/p/input")
+	@FindBy(name = "email")
 	public WebElement emailField;
 	
-	@FindBy(xpath = "/html/body/app-root/div/app-sign-in-page/div/div/div/div/form/div[2]/div[2]/div/p/input")
+	@FindBy(name = "password")
 	public WebElement passwordField;
 	
-	@FindBy(className = "button is-dark")
+	@FindBy(xpath = "//button[@class='button is-dark']")
 	public WebElement signInButton;
 
 }

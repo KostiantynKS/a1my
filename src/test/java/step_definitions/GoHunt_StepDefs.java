@@ -14,14 +14,9 @@ public class GoHunt_StepDefs {
 	
 	String actual = "";
 	String expected = "";
-	String email= ConfigurationReader.getProperty("url");
-	String password = ConfigurationReader.getProperty("password");
-	@Given("User already logged and on the HomePage")
+
+	@Given("User again already logged and on the HomePage")
 	public void user_already_logged_and_on_the_HomePage() {
-		StartingPage sp = new StartingPage();
-		 sp.emailField.sendKeys(email);
-		 sp.passwordField.sendKeys(password);
-		 sp.signInButton.click();
 	  actual = Driver.getDriver().getTitle();
 	  expected = "cybertek-bnb";
 	  assertEquals(expected, actual);
@@ -38,10 +33,13 @@ public class GoHunt_StepDefs {
 	@Then("User should be on the on the hunting page")
 	public void user_should_be_on_the_on_the_hunting_page() {
 		actual = Driver.getDriver().getTitle();
-	    expected = "hunt for spot";
+	    expected = "cybertek-bnb";
 	    assertEquals(expected, actual);
 	}
 
-
+//	StartingPage sp = new StartingPage();
+//	sp.emailField.sendKeys(email);
+//	sp.passwordField.sendKeys(password);
+//	sp.signInButton.click();
 
 }

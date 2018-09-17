@@ -16,11 +16,14 @@ import cucumber.api.junit.Cucumber;
 			"junit:target/cucumber.xml",
 			"rerun:target/rerun.txt"
 			},
-			tags = "@smoke",
+			tags = {"@temp"},
 			features = {"src/test/resources"},
 			glue={"step_definitions"},
-			dryRun=false
+			dryRun=true
 			)
 	
-public class CucesRunner {
+public class CukesRunner {
 }
+//java.lang.AssertionError: expected: java.util.ArrayList<[{name=kilimanjaro, id=121, capacity=6}, {name=half dome, id=122, capacity=6}]> 
+//                           but was: java.util.ArrayList<[{name=kilimanjaro, id=121, capacity=6}, {name=half dome, id=122, capacity=6}]>
+

@@ -27,7 +27,7 @@ public class Environment {
 		DB_HOST = properties.getProperty("db_host");
 		DB_USERNAME = properties.getProperty("db_username");
 		DB_PASSWORD = properties.getProperty("db_password");
-		BASE_URI = properties.getProperty("base_url");
+		BASE_URI = properties.getProperty("base_url");  //"qa1_base_url"
 //		TEACHER_USERNAME = properties.getProperty("teacher_email");
 //		TEACHER_PASSWORD = properties.getProperty("teacher_password");
 //		MEMBER_USERNAME = properties.getProperty("member_email");

@@ -13,8 +13,11 @@ public class HomePage {
 	public HomePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
-	@FindBy(linkText="/hunt")
+	@FindBy(xpath="//a[@href='/hunt']")
 	public WebElement huntButton;
+	
+	@FindBy(xpath = "//a[@href='/schedule/my']")
+	public WebElement scheduleButton;
 	
 
 }
